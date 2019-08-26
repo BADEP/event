@@ -18,37 +18,38 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 
 #. module: event_registration_cancel_reason
-#: view:event.registration.cancel.log.reason:event_registration_cancel_reason.event_registration_cancel_log_reason_view
-msgid "Abort"
-msgstr "Abortar"
-
-#. module: event_registration_cancel_reason
-#: view:event.registration.cancel.log.reason:event_registration_cancel_reason.event_registration_cancel_log_reason_view
+#: model_terms:ir.ui.view,arch_db:event_registration_cancel_reason.event_registration_cancel_log_reason_view
 msgid "Cancel registration"
 msgstr "Cancelar registro"
 
 #. module: event_registration_cancel_reason
-#: view:event.registration:event_registration_cancel_reason.view_event_registration_form
-msgid "Cancellation Reason:"
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration__cancel_reason_id
+#, fuzzy
+msgid "Cancellation Reason"
 msgstr "Razón de cancelación:"
 
 #. module: event_registration_cancel_reason
-#: view:event.registration:event_registration_cancel_reason.view_registration_search
-#: field:event.registration,cancel_reason_id:0
+#: model_terms:ir.ui.view,arch_db:event_registration_cancel_reason.view_registration_search
 msgid "Cancellation reason"
 msgstr "Razón de cancelación"
 
 #. module: event_registration_cancel_reason
-#: field:event.registration.cancel.log.reason,create_uid:0
-#: field:event.registration.cancel.reason,create_uid:0
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_log_reason__create_uid
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_reason__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: event_registration_cancel_reason
-#: field:event.registration.cancel.log.reason,create_date:0
-#: field:event.registration.cancel.reason,create_date:0
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_log_reason__create_date
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_reason__create_date
 msgid "Created on"
 msgstr "Creado en"
+
+#. module: event_registration_cancel_reason
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_log_reason__display_name
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_reason__display_name
+msgid "Display Name"
+msgstr ""
 
 #. module: event_registration_cancel_reason
 #: model:ir.model,name:event_registration_cancel_reason.model_event_registration
@@ -56,41 +57,56 @@ msgid "Event Registration"
 msgstr "Registro evento"
 
 #. module: event_registration_cancel_reason
-#: field:event.registration.cancel.log.reason,event_type_id:0
+#: model:ir.model,name:event_registration_cancel_reason.model_event_registration_cancel_log_reason
+#, fuzzy
+msgid "Event Registration Cancel Log Reason"
+msgstr "Razones de cancelación de registros"
+
+#. module: event_registration_cancel_reason
+#: model:ir.model,name:event_registration_cancel_reason.model_event_registration_cancel_reason
+#, fuzzy
+msgid "Event Registration Cancel Reason"
+msgstr "Razones de cancelación de registros"
+
+#. module: event_registration_cancel_reason
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_log_reason__event_type_id
 msgid "Event type"
 msgstr "Tipo de evento"
 
 #. module: event_registration_cancel_reason
-#: field:event.registration.cancel.reason,event_type_ids:0
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_reason__event_type_ids
 msgid "Event types"
 msgstr "Tipos de evento"
 
 #. module: event_registration_cancel_reason
-#: field:event.registration.cancel.log.reason,id:0
-#: field:event.registration.cancel.reason,id:0
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_log_reason__id
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_reason__id
 msgid "ID"
 msgstr "ID"
 
 #. module: event_registration_cancel_reason
-#: field:event.registration.cancel.log.reason,write_uid:0
-#: field:event.registration.cancel.reason,write_uid:0
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_log_reason____last_update
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_reason____last_update
+#, fuzzy
+msgid "Last Modified on"
+msgstr "Última actualización en"
+
+#. module: event_registration_cancel_reason
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_log_reason__write_uid
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_reason__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización por"
 
 #. module: event_registration_cancel_reason
-#: field:event.registration.cancel.log.reason,write_date:0
-#: field:event.registration.cancel.reason,write_date:0
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_log_reason__write_date
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_reason__write_date
 msgid "Last Updated on"
 msgstr "Última actualización en"
 
 #. module: event_registration_cancel_reason
-#: field:event.registration.cancel.reason,name:0
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_log_reason__reason_id
+#: model:ir.model.fields,field_description:event_registration_cancel_reason.field_event_registration_cancel_reason__name
 msgid "Reason"
-msgstr "Razón"
-
-#. module: event_registration_cancel_reason
-#: field:event.registration.cancel.log.reason,reason_id:0
-msgid "Reason id"
 msgstr "Razón"
 
 #. module: event_registration_cancel_reason
@@ -100,7 +116,7 @@ msgid "Registration cancellation reasons"
 msgstr "Razones de cancelación de registros"
 
 #. module: event_registration_cancel_reason
-#: help:event.registration.cancel.reason,event_type_ids:0
+#: model:ir.model.fields,help:event_registration_cancel_reason.field_event_registration_cancel_reason__event_type_ids
 msgid ""
 "Select the event types where you want to use this cancellation reason. Leave "
 "it empty for using in all."
@@ -109,17 +125,21 @@ msgstr ""
 "cancelación. Déjelo en blanco para usarla en todos."
 
 #. module: event_registration_cancel_reason
-#: view:event.registration.cancel.log.reason:event_registration_cancel_reason.event_registration_cancel_log_reason_view
+#: model_terms:ir.ui.view,arch_db:event_registration_cancel_reason.event_registration_cancel_log_reason_view
 msgid "Select the reason for cancelling the registration:"
 msgstr "Seleccione la razón para cancelar el registro:"
 
 #. module: event_registration_cancel_reason
-#: code:addons/event_registration_cancel_reason/wizard/event_registration_cancel_log_reason.py:31
+#: code:addons/event_registration_cancel_reason/wizard/event_registration_cancel_log_reason.py:30
 #, python-format
 msgid "You cannot cancel registrations from events of different types at once."
 msgstr "No puede cancelar registros de eventos de distintos tipos a la vez."
 
-#. module: event_registration_cancel_reason
-#: view:event.registration.cancel.log.reason:event_registration_cancel_reason.event_registration_cancel_log_reason_view
-msgid "or"
-msgstr "o"
+#~ msgid "Abort"
+#~ msgstr "Abortar"
+
+#~ msgid "Reason id"
+#~ msgstr "Razón"
+
+#~ msgid "or"
+#~ msgstr "o"
