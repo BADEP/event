@@ -30,7 +30,7 @@
                         <td>State</td>
                     </tr>
                 </thead>
-                <tr t-foreach="ctx['events']" t-as="event">
+                <tr t-foreach="ctx.get('events', [])" t-as="event">
                     <td>
                         <span
                             t-out="event.date_begin"
