@@ -6,27 +6,27 @@
 import {registry} from "@web/core/registry";
 
 registry.category("web_tour.tours").add("website_event_filter_city", {
-    steps: () => [
-        {
-            trigger: ".btn[title='Filter by Country']:contains('All countries')",
-            run: "click",
-        },
-        {
-            trigger: "a.dropdown-item:contains('Spain')",
-            expectUnloadPage: true,
-            run: "click",
-        },
-        {
-            trigger: ".btn[title='Filter by City']:contains('All Cities')",
-            run: "click",
-        },
-        {
-            trigger: "a.dropdown-item:contains('Santa Cruz de Tenerife')",
-            expectUnloadPage: true,
-            run: "click",
-        },
-        {
-            trigger: "article:contains('My Event Test')",
-        },
-    ],
+  steps: () => [
+    {
+      trigger: ".btn[title='Filter by Country']:contains('All countries')",
+      run: "click",
+    },
+    {
+      trigger: "a.dropdown-item:contains('Spain')",
+      expectUnloadPage: true,
+      run: "click",
+    },
+    {
+      trigger: ".btn[title='Filter by City']:contains('All Cities')",
+      run: "click",
+    },
+    {
+      trigger: "a.dropdown-item:contains('Santa Cruz de Tenerife')",
+      expectUnloadPage: true,
+      run: "click",
+    },
+    {
+      trigger: "article:contains('My Event Test')",
+    },
+  ],
 });
