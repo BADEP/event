@@ -4,6 +4,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestEventCancelCase(BaseCommon):
+    _test_user_groups = None
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -70,7 +72,7 @@ class TestEventCancelCase(BaseCommon):
         self.event.button_cancel()
         self.assertEqual(self.event.kanban_state, "cancel")
         self.assertTrue(
-            all([a.state == "cancel" for a in self.attendees]),
+            all(a.state == "cancel" for a in self.attendees),
             f"Not all the attendees are cancelled: "
             f"{' / '.join([str((a.name, a.state)) for a in self.attendees])}",
         )

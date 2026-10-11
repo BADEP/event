@@ -87,7 +87,7 @@ class EventMailRegistration(models.Model):
             lambda x: (
                 x.scheduler_id.interval_type == "after_cancel"
                 and not x.mail_sent
-                and not x.registration_id.state == "draft"
+                and x.registration_id.state != "draft"
                 and (x.scheduled_date and x.scheduled_date <= now)
                 and x.scheduler_id.notification_type == "mail"
             )
