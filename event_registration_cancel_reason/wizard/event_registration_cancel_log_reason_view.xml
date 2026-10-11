@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record model="ir.ui.view" id="event_registration_cancel_log_reason_view">
+    <record id="event_registration_cancel_log_reason_view" model="ir.ui.view">
         <field name="name">Logging registration cancellation wizard</field>
         <field name="model">event.registration.cancel.log.reason</field>
         <field name="arch" type="xml">
