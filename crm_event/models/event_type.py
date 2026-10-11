@@ -67,7 +67,7 @@ class EventType(models.Model):
             )
             event_counts[event_type_id] = event_counts.get(event_type_id, 0) + 1
         results = []
-        for event_type_id in event_seats.keys():
+        for event_type_id in event_seats:
             event_type = self.env["event.type"].browse(event_type_id)
             results.append(
                 {
