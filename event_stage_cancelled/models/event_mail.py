@@ -19,8 +19,9 @@ class EventMail(models.Model):
         regular_schedulers = self.filtered(lambda x: x.interval_type != "after_cancel")
         res = super(EventMail, regular_schedulers)._compute_scheduled_date()
         for scheduler in self.filtered(
-            lambda x: x.interval_type == "after_cancel"
-            and x.event_id.stage_id.is_cancelled
+            lambda x: (
+                x.interval_type == "after_cancel" and x.event_id.stage_id.is_cancelled
+            )
         ):
             date, sign = scheduler.event_id.write_date, 1
             scheduler.scheduled_date = (
@@ -48,8 +49,9 @@ class EventMail(models.Model):
         regular_schedulers = self.filtered(lambda x: x.interval_type != "after_cancel")
         res = super(EventMail, regular_schedulers).execute()
         for scheduler in self.filtered(
-            lambda x: x.interval_type == "after_cancel"
-            and x.event_id.stage_id.is_cancelled
+            lambda x: (
+                x.interval_type == "after_cancel" and x.event_id.stage_id.is_cancelled
+            )
         ):
             # Get only registrations cancelled from the event button
             registrations = (
@@ -82,11 +84,13 @@ class EventMailRegistration(models.Model):
         )
         res = super(EventMailRegistration, regular).execute()
         todo = self.filtered(
-            lambda x: x.scheduler_id.interval_type == "after_cancel"
-            and not x.mail_sent
-            and not x.registration_id.state == "draft"
-            and (x.scheduled_date and x.scheduled_date <= now)
-            and x.scheduler_id.notification_type == "mail"
+            lambda x: (
+                x.scheduler_id.interval_type == "after_cancel"
+                and not x.mail_sent
+                and not x.registration_id.state == "draft"
+                and (x.scheduled_date and x.scheduled_date <= now)
+                and x.scheduler_id.notification_type == "mail"
+            )
         )
         for reg_mail in todo:
             organizer = reg_mail.scheduler_id.event_id.organizer_id

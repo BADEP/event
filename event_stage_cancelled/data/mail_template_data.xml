@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="event_cancelled" model="mail.template">
         <field name="name">Event: Cancelled</field>
