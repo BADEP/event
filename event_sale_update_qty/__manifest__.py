@@ -4,7 +4,7 @@
 {
     "name": "Event Sale Update Qty",
     "summary": "Update event registrations from confirmed sale order lines.",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "development_status": "Beta",
     "category": "Marketing",
     "website": "https://github.com/OCA/event",
@@ -15,8 +15,8 @@
     "installable": True,
     "depends": ["event_sale"],
     "data": [
-        "security/ir.model.access.csv",
         "views/sale_order_view.xml",
         "wizards/event_sale_update_qty_wizard.xml",
+        'security/ir.access.csv',
     ],
 }
