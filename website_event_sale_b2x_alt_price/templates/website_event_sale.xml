@@ -13,46 +13,34 @@
             expr="//div[contains(@t-attf-class, 'o_wevent_registration_multi_select')]//span[@itemprop='price']"
             position="before"
         >
-            <t t-call="website_sale_b2x_alt_price.alt_price">
-                <t
-                    t-set="combination_info"
-                    t-value="ticket._get_ticket_combination_info()"
-                />
-                <t t-set="price" t-value="combination_info['price']" />
-                <t t-set="alt_price" t-value="combination_info['alt_price']" />
-                <t
-                    t-set="alt_list_price"
-                    t-value="combination_info['alt_list_price']"
-                />
-                <t
-                    t-set="has_discounted_price"
-                    t-value="combination_info['has_discounted_price']"
-                />
-                <t t-set="alt_field" t-value="combination_info['alt_field']" />
-            </t>
+            <t
+                t-set="combination_info"
+                t-value="ticket._get_ticket_combination_info()"
+            />
+            <t t-call="website_sale_b2x_alt_price.alt_price"
+                combination_info="combination_info"
+                price="combination_info['price']"
+                alt_price="combination_info['alt_price']"
+                alt_list_price="combination_info['alt_list_price']"
+                has_discounted_price="combination_info['has_discounted_price']"
+                alt_field="combination_info['alt_field']"/>
         </xpath>
         <!-- Add the website_sale_b2x_alt_price.alt_price when only 1 ticket -->
         <xpath
             expr="//div[hasclass('o_wevent_registration_single')]//span[@itemprop='price']"
             position="before"
         >
-            <t t-call="website_sale_b2x_alt_price.alt_price">
-                <t
-                    t-set="combination_info"
-                    t-value="tickets._get_ticket_combination_info()"
-                />
-                <t t-set="price" t-value="combination_info['price']" />
-                <t t-set="alt_price" t-value="combination_info['alt_price']" />
-                <t
-                    t-set="alt_list_price"
-                    t-value="combination_info['alt_list_price']"
-                />
-                <t
-                    t-set="has_discounted_price"
-                    t-value="combination_info['has_discounted_price']"
-                />
-                <t t-set="alt_field" t-value="combination_info['alt_field']" />
-            </t>
+            <t
+                t-set="combination_info"
+                t-value="tickets._get_ticket_combination_info()"
+            />
+            <t t-call="website_sale_b2x_alt_price.alt_price"
+                combination_info="combination_info"
+                price="combination_info['price']"
+                alt_price="combination_info['alt_price']"
+                alt_list_price="combination_info['alt_list_price']"
+                has_discounted_price="combination_info['has_discounted_price']"
+                alt_field="combination_info['alt_field']"/>
         </xpath>
     </template>
 </data>
