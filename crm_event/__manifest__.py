@@ -3,7 +3,7 @@
 {
     "name": "CRM Event Category",
     "summary": "Link opportunities to event categories",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "development_status": "Mature",
     "category": "Event Management",
     "website": "https://github.com/OCA/event",
@@ -15,8 +15,8 @@
     "depends": ["crm", "event"],
     "data": [
         "reports/event_type_report_view.xml",
-        "security/ir.model.access.csv",
         "views/crm_lead_view.xml",
         "views/event_type_view.xml",
+        'security/ir.access.csv',
     ],
 }

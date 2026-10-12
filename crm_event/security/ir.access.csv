@@ -1,0 +1,2 @@
+id,name,model_id,group_id/id,operation,domain
+access_event_type_report_manager,Access to event.type.report for event managers,event.type.report,event.group_event_manager,r,
