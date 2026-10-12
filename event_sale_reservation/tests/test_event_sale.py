@@ -12,6 +12,8 @@ from ..exceptions import ReservationWithoutEventTypeError
 
 
 class EventSaleCase(BaseCommon):
+    _test_user_groups = None
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
